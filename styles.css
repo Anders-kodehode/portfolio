@@ -167,3 +167,10 @@ p {
 .dropdown:hover .drop-content {
     display: block;
 }
+
+.github {
+    position: fixed;
+    width: 5%;
+    left: 0;
+    bottom: 5%;
+}
