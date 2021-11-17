@@ -23,14 +23,14 @@ img {
 .socials {
     display: flex;
     position: fixed;
-    margin: .5% 0 0 90%;
+    margin: .5% 0 0 88%;
     padding-right: .5rem;
     gap: .3rem;
 }
 
 .logo {
     position: fixed;
-    max-width: 5%;
+    max-width: 6%;
     margin-top: 2%;
     left: 0;
 }
@@ -190,10 +190,14 @@ p {
     display: block;
 }
 
-.container {
+.contact {
+    margin: 6% 0 0 0;
+}
+
+.form {
     background-color: #4f3b5c13;
     width: 30%;
-    margin: 4% 0 5% 35%;
+    margin: 2% 0 5% 35%;
     padding: 1rem;
     font-weight: 600;
     border-radius: .5rem;
