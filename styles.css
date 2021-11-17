@@ -35,6 +35,13 @@ img {
     left: 0;
 }
 
+.github {
+    position: fixed;
+    width: 5%;
+    left: 0;
+    bottom: 5%;
+}
+
 .face {
     width: 15%;
     margin: 5% 0 0 42.5%;
@@ -183,13 +190,6 @@ p {
     display: block;
 }
 
-.github {
-    position: fixed;
-    width: 5%;
-    left: 0;
-    bottom: 5%;
-}
-
 .container {
     background-color: #4f3b5c13;
     width: 30%;
@@ -230,4 +230,34 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #391a83;
+}
+
+.top{
+    color: rgb(194, 193, 193);
+    display: inline-block;
+    position: fixed;
+    right: 8%;
+    bottom: 14%;
+    padding-right: 0;
+    border-color:white;
+    transition: all 200ms ease-out;
+  }
+  .top:before{
+    content: '▲';
+    position:absolute;
+    width: 1.3em;
+    height: 1.3em;
+    font-size: 3.3em;
+    line-height: 1.15em;
+    border: solid .1em rgb(175, 175, 175);
+    border-radius: 10em;
+    border-color: inherit;
+    transition: transform 500ms ease-in;
+  }
+  .top:hover{
+    color: #5e4b8a;
+    border-color: #5e4b8a;
+  }
+  .top:hover:before{
+    transform: rotate(360deg);
 }
