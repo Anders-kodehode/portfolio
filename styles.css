@@ -115,6 +115,7 @@ p {
 }
 
 .about-content {
+    text-align: center;
     font-size: 1.2em;
 }
 
@@ -187,4 +188,46 @@ p {
     width: 5%;
     left: 0;
     bottom: 5%;
+}
+
+.container {
+    background-color: #4f3b5c13;
+    width: 30%;
+    margin: 4% 0 5% 35%;
+    padding: 1rem;
+    font-weight: 600;
+    border-radius: .5rem;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid rgb(179, 168, 187);
+    border-radius: .3rem;
+    resize: vertical;
+}
+
+input[type=text] {
+    height: 2.5rem;
+}
+
+.description {
+    height: 8rem;
+}
+
+input[type=submit] {
+    background-color: #46209e;
+    color: #c9c8d1;
+    padding: .8rem 1.2rem;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #391a83;
 }
