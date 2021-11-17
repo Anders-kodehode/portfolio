@@ -44,12 +44,12 @@ img {
     display: none;
 }
 
-.lang-switch .content.contentenglish {
+.lang-switch .content.contentnorsk {
     display: block;
 }
 
-.en {
-    margin-left: 44%;
+.no {
+    margin-left: 45%;
 }
 
 .check {
@@ -87,11 +87,11 @@ img {
     border: solid .1rem #c9c8d1;
 }
 
-.check:checked ~ .content.contentenglish {
+.check:checked ~ .content.contentnorsk {
     display: none;
 }
 
-.check:checked ~ .content.contentnorsk {
+.check:checked ~ .content.contentenglish {
     display: block;
 }
 
