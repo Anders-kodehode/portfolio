@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
+    /* Background */
+    --main-background: hsl(268, 74%, 9%, 0.4);
+    --keypad-background: hsla(268, 70%, 12%, 0.4);
+    --screen-background: hsla(268, 70%, 12%, 0.4);
+    /* Keys */
+    --key-background: hsl(261, 58%, 29%);
+    --key-shadow: hsl(259, 61%, 20%);
+    --del-reset-background: hsl(258, 63%, 23%);
+    --del-reset-shadow: hsl(258, 61%, 16%);
+    --equals-background: hsl(239, 58%, 23%);
+    --equals-shadow: hsl(240, 57%, 16%);
+}
+
+html {
     scroll-behavior: smooth;
+    background: none !important;
 }
 
 * {
@@ -116,15 +131,22 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 8% 0 1% 0;
-    font-size: clamp(1em, 1em + 5vw, 3em);
+    font-size: clamp(1rem, 1rem + 5vw, 3rem);
     font-weight: 800;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
 }
 
 p {
     display: flex;
     justify-content: center;
     margin-bottom: .4rem;
-    font-size: clamp(.5em, .3em + 3vw, 1.4em);
+    font-size: clamp(.5rem, .3rem + 3vw, 1.4rem);
 }
 
 .about {
@@ -133,15 +155,104 @@ p {
 
 .about-content {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.2rem;
+}
+
+.projects {
+    margin-top: 3%;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    max-width: 24rem;
+    margin-left: 35%;
+}
+
+button:not(.top) {
+    color: rgb(200, 200, 200);
+    padding: 1.1rem 0.25rem;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 50ms ease-in-out;
+}
+
+button:hover,
+.result-screen:hover {
+    outline: 2px solid #7b6992
+}
+
+.number,
+.operator,
+.decimal {
+    background-color: var(--key-background);
+    box-shadow: 0 4px 0 var(--key-shadow);
+    width: 70px;
+    height: 50px;
+}
+
+.del,
+.reset {
+    background-color: var(--del-reset-background);
+    box-shadow: 0 4px 0 var(--del-reset-shadow);
+    height: 50px;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
+
+.del {
+    width: 70px;
+}
+
+.equal {
+    background-color: var(--equals-background);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 3px 0 var(--equals-shadow);
+    height: 50px;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
+
+.result-container {
+    height: 4rem;
+}
+  
+.result-screen {
+    background-color: var(--screen-background);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    font-size: 2rem;
+    border-radius: .8rem;
+}
+
+.input-container {
+    background-color: var(--keypad-background);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1.5rem;
+    border-radius: 10px;
+    gap: 1rem;
+    }
+    .reset {
+        grid-column: 1 / 3;
+    }
+    .equal {
+        grid-column: 3 / -1;
 }
 
 .contact {
-    margin: 6% 0 0 0;
+    margin: 4% 0 0 0;
 }
 
 .form {
-    background-color: #4f3b5c13;
+    background-color: var(--keypad-background);
     max-width: 35%;
     min-width: 18rem;
     margin: 2% auto 5% auto;
@@ -166,13 +277,14 @@ input[type=text] {
 
 .description {
     height: 8rem;
+    font-weight: 700;
 }
 
 input[type=submit] {
     background-color: #46209e;
-    color: #c9c8d1;
+    color: #eae9f0;
     padding: .8rem 1.2rem;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 700;
     border: none;
     border-radius: 4px;
@@ -196,12 +308,12 @@ input[type=submit]:hover {
   .top:before{
     content: '▲';
     position:absolute;
-    width: 1.3em;
-    height: 1.3em;
-    font-size: 3.3em;
-    line-height: 1.15em;
-    border: solid .1em rgb(175, 175, 175);
-    border-radius: 10em;
+    width: 4rem;
+    height: 4rem;
+    font-size: 3.3rem;
+    line-height: 3.4rem;
+    border: solid .2rem rgb(175, 175, 175);
+    border-radius: 10rem;
     border-color: inherit;
     transition: transform 500ms ease-in;
   }
