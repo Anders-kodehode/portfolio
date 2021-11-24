@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
+    /* Calculator Colors */
     /* Background */
     --main-background: hsl(268, 74%, 9%, 0.4);
     --keypad-background: hsla(268, 70%, 12%, 0.4);
@@ -33,7 +34,7 @@ body {
     color: #c9c8d1;
     font-family: 'Fira Sans';
 }
-
+/* Various Fixed Elements */
 img {
     max-width: 100%;
     margin-left: 3%;
@@ -60,13 +61,13 @@ img {
     left: 0;
     bottom: 5%;
 }
-
+/* Portrait */
 .face {
     display: flex;
     width: 15%;
     margin: 5% auto 0 auto;
 }
-
+/* Language Switch */
 .lang-switch .content {
     display: none;
 }
@@ -126,7 +127,7 @@ img {
 .check:checked ~ .content.contentenglish {
     display: block;
 }
-
+/* Text */
 h1 {
     display: flex;
     justify-content: center;
@@ -148,7 +149,7 @@ p {
     margin-bottom: .4rem;
     font-size: clamp(.5rem, .3rem + 3vw, 1.4rem);
 }
-
+/* About Me */
 .about {
     margin-top: 3%;
 }
@@ -157,18 +158,18 @@ p {
     text-align: center;
     font-size: 1.2rem;
 }
-
+/* My Works */
 .projects {
     margin-top: 3%;
 }
-
+/* Calculator Section */
 .calculator {
     display: flex;
     flex-direction: column;
     max-width: 24rem;
     margin-left: 35%;
 }
-
+/* General Button Styling */
 button:not(.top) {
     color: rgb(200, 200, 200);
     padding: 1.1rem 0.25rem;
@@ -186,7 +187,7 @@ button:hover,
 .result-screen:hover {
     outline: 2px solid #7b6992
 }
-
+/* Specific Button Styling */
 .number,
 .operator,
 .decimal {
@@ -217,7 +218,7 @@ button:hover,
     font-size: 1.25rem;
     letter-spacing: 2px;
 }
-
+/* Display */
 .result-container {
     height: 4rem;
 }
@@ -231,7 +232,7 @@ button:hover,
     font-size: 2rem;
     border-radius: .8rem;
 }
-
+/* Input */
 .input-container {
     background-color: var(--keypad-background);
     display: grid;
@@ -246,11 +247,11 @@ button:hover,
     .equal {
         grid-column: 3 / -1;
 }
-
+/* Contact Section */
 .contact {
     margin: 4% 0 0 0;
 }
-
+/* Contact Form */
 .form {
     background-color: var(--keypad-background);
     max-width: 35%;
@@ -294,7 +295,7 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #391a83;
 }
-
+/* Scroll Up Button */
 .top{
     color: rgb(194, 193, 193);
     display: inline-block;

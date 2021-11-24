@@ -1,12 +1,13 @@
-mybutton = document.querySelector(".top");
+// Scroll To Top Button
+scrollTop = document.querySelector(".top");
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 400) {
-    mybutton.style.display = "block";
+    scrollTop.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    scrollTop.style.display = "none";
   }
 }
 
@@ -15,6 +16,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+// Calculator
 const display = document.querySelector('.result-screen')
 const buttons = Array.from(document.querySelectorAll('button'))
 
