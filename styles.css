@@ -140,13 +140,13 @@ h2 {
     display: flex;
     justify-content: center;
     margin-bottom: 1%;
-    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-size: clamp(1rem, 1rem + 4.5vw, 2.5rem);
 }
 
 p {
     display: flex;
     justify-content: center;
-    margin-bottom: .4rem;
+    margin: 0 .5rem .4rem .5rem;
     font-size: clamp(.5rem, .3rem + 3vw, 1.4rem);
 }
 /* About Me */
