@@ -17,7 +17,6 @@ html {
 
 html {
     scroll-behavior: smooth;
-    background: none !important;
 }
 
 * {
@@ -27,7 +26,8 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to bottom right, rgba(6, 3, 20, 0.950), rgba(14, 1, 20, 0.950)), url(./Images/background-keyboard.jpg);
+    background-image: linear-gradient(to bottom right, rgba(6, 3, 20, 0.950), rgba(14, 1, 20, 0.950)), url(./Images/background-texture.jpg);
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -195,7 +195,7 @@ p {
 }
 
 .ball::before {
-    background: indigo;
+    background: var(--del-reset-background);
     content: "";
     position: absolute;
     width: 100%;
