@@ -40,10 +40,9 @@ img {
     margin-left: 3%;
 }
 
-.socials {
+.header {
     display: flex;
-    position: fixed;
-    margin: .5% 0 0 88%;
+    margin: .5% 0 0 75%;
     padding-right: .5rem;
     gap: .3rem;
 }
@@ -126,6 +125,26 @@ img {
 
 .check:checked ~ .content.contentenglish {
     display: block;
+}
+/* Jump to sections */
+.checkpoint {
+    background: none;
+    color: inherit;
+    display: inline-flex;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-style: none;
+    cursor: pointer;
+}
+
+.checkpoint:hover {
+    color: #655a7e;
+    outline: none;
+}
+
+#about-me {
+    margin-left: 75%;
 }
 /* Text */
 h1 {
@@ -257,7 +276,7 @@ p {
     transform: rotateY(-40deg);
 }
 /* General Button Styling */
-button:not(.top) {
+button:not(.checkpoint, .top) {
     color: rgb(200, 200, 200);
     padding: 1.1rem 0.25rem;
     font-family: 'Spartan', sans-serif;
@@ -407,8 +426,8 @@ input[type=submit]:hover {
     transition: transform 500ms ease-in;
   }
   .top:hover{
-    color: #5e4b8a;
-    border-color: #5e4b8a;
+    color: #655a7e;
+    border-color: #655a7e;
   }
   .top:hover:before{
     transform: rotate(360deg);

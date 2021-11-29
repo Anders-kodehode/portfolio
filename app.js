@@ -1,3 +1,9 @@
+// Jump to sections
+jumpToMe = document.querySelector("about-me")
+
+jumpToMe.addEventListener('click'), function(e) {
+    window.onclick
+}
 // Scroll To Top Button
 scrollTop = document.querySelector(".top");
 
@@ -17,8 +23,8 @@ function topFunction() {
 }
 
 // Pokeball
-const ball = document.querySelector('.ball');
-const innerButton = document.querySelector('.inner-button');
+const ball = document.querySelector(".ball");
+const innerButton = document.querySelector(".inner-button");
 
 ball.addEventListener('click', function(e) {
     e.preventDefault;
@@ -33,16 +39,16 @@ ball.addEventListener('click', function(e) {
 innerButton.addEventListener('click', function(e) {
     e.preventDefault;
 
-    innerButton.classList.remove('inner-button');
+    innerButton.classList.remove("inner-button");
 
     void innerButton.offsetWidth;
 
-    innerButton.classList.add('inner-button');
+    innerButton.classList.add("inner-button");
 }, false);
 
 // Calculator
-const display = document.querySelector('.result-screen')
-const buttons = Array.from(document.querySelectorAll('button'))
+const display = document.querySelector(".result-screen")
+const buttons = Array.from(document.querySelectorAll("button:not(.checkpoint)"))
 
 buttons.map(button => {
     button.addEventListener('click', (e) => {
@@ -59,7 +65,7 @@ buttons.map(button => {
                 try{
                     display.value = eval(display.value);
                 } catch {
-                    display.value = 'Use a valid input'
+                    display.value = "Use a valid input"
                 }
                 break;
             default:
