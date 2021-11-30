@@ -1,16 +1,21 @@
 // Jump to sections
-jumpToMe = document.querySelector("about-me")
-
-jumpToMe.addEventListener('click'), function(e) {
-    window.onclick
+function scrollAbout() {
+    window.scrollTo(0, 500);
 }
+function scrollProjects() {
+    window.scrollTo(0, 1050);
+}
+function scrollContact() {
+    window.scrollTo(0, 1650);
+}
+
 // Scroll To Top Button
 scrollTop = document.querySelector(".top");
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 400) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 499) {
     scrollTop.style.display = "block";
   } else {
     scrollTop.style.display = "none";
