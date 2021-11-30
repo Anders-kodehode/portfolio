@@ -34,6 +34,21 @@ body {
     color: #c9c8d1;
     font-family: 'Fira Sans';
 }
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: .7em;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 100vw;
+    margin-block: .1em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #726d75;
+    border: .1em solid white;
+    border-radius: 100vw;
+}
 /* Various Fixed Elements */
 img {
     max-width: 100%;
