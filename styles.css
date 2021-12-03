@@ -65,12 +65,14 @@ img {
 .logo {
     position: fixed;
     max-width: 6%;
+    min-width: 36px;
     margin-top: 2%;
     left: 0;
 }
 
 .github {
     position: fixed;
+    min-width: 36px;
     width: 5%;
     left: 0;
     bottom: 5%;
@@ -181,7 +183,7 @@ p {
     display: flex;
     justify-content: center;
     margin: 0 .5rem .4rem .5rem;
-    font-size: clamp(.5rem, .3rem + 3vw, 1.4rem);
+    font-size: clamp(.5rem, .3rem + 4vw, 1.4rem);
 }
 /* About Me */
 .about {
@@ -190,7 +192,7 @@ p {
 
 .about-content {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: clamp(.5rem, .3rem + 4vw, 1.4rem);
 }
 /* My Works */
 .projects {
@@ -424,12 +426,11 @@ input[type=submit]:hover {
     display: inline-block;
     position: fixed;
     right: 8%;
-    bottom: 14%;
-    padding-right: 0;
+    bottom: 16%;
     border-color:white;
     transition: all 200ms ease-out;
   }
-  .top:before{
+  .top::before{
     content: '▲';
     position:absolute;
     width: 4rem;
@@ -445,6 +446,97 @@ input[type=submit]:hover {
     color: #655a7e;
     border-color: #655a7e;
   }
-  .top:hover:before{
+  .top:hover::before{
     transform: rotate(360deg);
+}
+
+@media (max-width: 1240px) {
+    .no {
+        margin: 1% auto 0 42%;
+    }
+    #about-me {
+        margin-left: 69%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .projects {
+        flex-direction: column;
+    }
+    .ball {
+        margin: 20% 0 0 0;
+        transform: rotateY(0);
+    }
+    .calculator {
+        margin: 2% 0 0 0;
+        transform: rotateY(0);
+    }
+    .top {
+        right: 9%;
+        bottom: 15%;
+    }
+    .top::before {
+        width: 3.6rem;
+        height: 3.6rem;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .no {
+        margin: 1% auto 0 40%;
+    }
+    .checkpoint {
+        display: none;
+    }
+    .top {
+        right: 10%;
+        bottom: 13%;
+    }
+    .top::before {
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 2.6rem;
+        line-height: 2.8rem;
+    }
+}
+
+@media (max-width: 670px) {
+    .logo {
+        position: absolute;
+    }
+    .no {
+        margin: 1% auto 0 38%;
+    }
+    .top {
+        right: 12%;
+        bottom: 12%;
+    }
+    .top::before {
+        width: 2.8rem;
+        height: 2.8rem;
+        font-size: 2.2rem;
+        line-height: 2.4rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .no {
+        margin: 1% auto 0 32%;
+    }
+    .calculator {
+        width: max(95%, 300px);
+    }
+    .number,
+    .operator,
+    .decimal,
+    .del,
+    .reset,
+    .equal {
+        width: auto
+    }
+    .top::before {
+        display: none;
+    }
 }
