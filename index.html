@@ -12,20 +12,30 @@
     <body>
 
         <header>
-            <div class="socials">
+            <div class="header">
+                <!-- Logo -->
                 <img src="./Images/A2.png" alt="logo" class="logo">
-                <a href="https://hackertyper.com/" rel="noopener noreferrer" target="_blank"><img src="./Images/twitter.png" alt="twitter" class="twitter"></a>
-                <a href="https://hackertyper.com/" rel="noopener noreferrer" target="_blank"><img src="./Images/instagram.png" alt="instagram" class="instagram"></a>
-                <a href="https://hackertyper.com/" rel="noopener noreferrer" target="_blank"><img src="./Images/Twitch.png" alt="twitch" class="twitch"></a>
-                <a href="https://hackertyper.com/" rel="noopener noreferrer" target="_blank"><img src="./Images/Youtube.png" alt="youtube" class="youtube"></a>
             </div>
         </header>
         
         <main>
+            <!-- Language Switch -->
             <div class="lang-switch">
                 <span class="no">Norsk</span>
                 <input type="checkbox" class="check">
                 <span class="en">English</span>
+                <!-- Jump to sections -->
+            <div class="content contentnorsk">
+                <button onclick="scrollAbout()" class="checkpoint" id="about-me">Om meg</button>
+                <button onclick="scrollProjects()" class="checkpoint" id="projects">Prosjekter</button>
+                <button onclick="scrollContact()" class="checkpoint" id="contact-me">Kontakt meg</button>
+            </div>
+            <div class="content contentenglish">
+                <button onclick="scrollAbout()" class="checkpoint" id="about-me">About me</button>
+                <button onclick="scrollProjects()" class="checkpoint" id="projects">Projects</button>
+                <button onclick="scrollContact()" class="checkpoint" id="contact-me">Contact me</button>
+            </div>
+                <!-- Intro -->
                 <div class="content contentnorsk">
                     <h1>Anders Nyhammer</h1>
                     <p>Ekstraordinær frontend utvikler</p>
@@ -42,7 +52,9 @@
                     <p>Special snowflake</p>
                     <p>FFXIV addict</p>
                 </div>
+                <!-- Portrait -->
                 <img src="./Images/face.jpg" alt="face" class="face">
+                <!-- Pitch -->
                 <div class="content contentnorsk">
                     <h2 class="about">Om meg</h2>
                     <p class="about-content">Eg tar for augeblikket eit frontend kurs gjennom Kodehode<br>
@@ -61,13 +73,23 @@
                         figma, html, css and a bit of JavaScript.</p><br>
                     <p class="about-content">My goal is to create websites and webdesign<br>
                         that give a lasting impression on the end user.</p><br>
-                    <p class="about-content">I have always been interested in computers and videosgames,<br>
+                    <p class="about-content">I have always been interested in computers and videogames,<br>
                         which has given me a stepping stone towards the world of code and programming.<br>
                         Role-playing games in particular has given me an eye for good UX design.</p>
                 </div>
-
-                <div class="projects">
-                    <h2>Demo</h2>
+                <!-- My Works -->
+                <div class="projects perspective">  
+                    <h2 class="demo">Demo</h2>
+                    <!-- Pokeball -->
+                    <div class="container">
+                        <div class="ball">
+                            <div class="button">
+                                <div class="inner-button">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Calculator -->
                     <div class="calculator">
                         <div class="result-container">
                             <input type="text" class="result-screen" placeholder="0" disabled />
@@ -93,14 +115,15 @@
                             <button type="button" class="equal" value="=">=</button>
                         </div>
                     </div>
-                  
                 </div>
+                <!-- Contact Section -->
                 <div class="content contentnorsk">
                     <h2 class="contact">Kontakt meg</h2>
                 </div>
                 <div class="content contentenglish">
                     <h2 class="contact">Contact me</h2>
                 </div>
+                <!-- Contact Form -->
                 <div class="form content contentnorsk">
                     <form action="action_page.php">
                 
@@ -141,9 +164,9 @@
                 </div>
             </div>
         </main>
-
+        <!-- Github Link Button -->
         <a href="https://github.com/Anders-kodehode" rel="noopener noreferrer" target="_blank"><img src="./Images/github.PNG" alt="github" class="github"></a>
-
+        <!-- Scroll To Top Button -->
         <button onclick="topFunction()" class="top" title="Go to top"></button>
 
     </body>

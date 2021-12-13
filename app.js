@@ -1,12 +1,24 @@
-mybutton = document.querySelector(".top");
+// Jump to sections
+function scrollAbout() {
+    window.scrollTo(0, 500);
+}
+function scrollProjects() {
+    window.scrollTo(0, 1050);
+}
+function scrollContact() {
+    window.scrollTo(0, 1650);
+}
+
+// Scroll To Top Button
+scrollTop = document.querySelector(".top");
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 400) {
-    mybutton.style.display = "block";
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 499) {
+    scrollTop.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    scrollTop.style.display = "none";
   }
 }
 
@@ -15,8 +27,33 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-const display = document.querySelector('.result-screen')
-const buttons = Array.from(document.querySelectorAll('button'))
+// Pokeball
+const ball = document.querySelector(".ball");
+const innerButton = document.querySelector(".inner-button");
+
+ball.addEventListener('click', function(e) {
+    e.preventDefault;
+
+    ball.classList.remove('ball');
+
+    void ball.offsetWidth;
+
+    ball.classList.add('ball');
+}, false);
+
+innerButton.addEventListener('click', function(e) {
+    e.preventDefault;
+
+    innerButton.classList.remove("inner-button");
+
+    void innerButton.offsetWidth;
+
+    innerButton.classList.add("inner-button");
+}, false);
+
+// Calculator
+const display = document.querySelector(".result-screen")
+const buttons = Array.from(document.querySelectorAll("button:not(.checkpoint)"))
 
 buttons.map(button => {
     button.addEventListener('click', (e) => {
@@ -33,7 +70,7 @@ buttons.map(button => {
                 try{
                     display.value = eval(display.value);
                 } catch {
-                    display.value = 'Use a valid input'
+                    display.value = "Use a valid input"
                 }
                 break;
             default:
