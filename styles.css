@@ -504,6 +504,12 @@ input[type=submit]:hover {
 }
 
 @media (min-width: 1920px) {
+    .ball {
+        margin: 5% 0 0 330%;
+    }
+    .calculator {
+        margin: 5% 0 0 36%;
+    }
     .top::before {
         width: 5.8rem;
         height: 5.8rem;
