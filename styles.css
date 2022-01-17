@@ -33,6 +33,7 @@ body {
     background-size: cover;
     color: #c9c8d1;
     font-family: 'Fira Sans';
+    overflow: overlay;
 }
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
@@ -45,8 +46,8 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #726d75;
-    border: .1em solid white;
+    background-color: hsl(278, 4%, 44%);
+    border: .1em solid hsl(278, 4%, 55%);
     border-radius: 100vw;
 }
 /* Various Fixed Elements */
