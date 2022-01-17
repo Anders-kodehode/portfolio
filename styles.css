@@ -295,7 +295,7 @@ p {
 }
 
 @keyframes shake {
-    0 { transform: translate(0, 0) rotate(0); }
+    0% { transform: translate(0, 0) rotate(0); }
     50% { transform: translate(-10px, 0) rotate(-15deg); }
     100% { transform: translate(0, 0) rotateY(-30); }
 }
