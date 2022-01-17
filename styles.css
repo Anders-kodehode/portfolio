@@ -462,6 +462,86 @@ input[type=submit]:hover {
   .top:hover::before{
     transform: rotate(360deg);
 }
+/* Media Queries */
+@media (min-width: 2560px) {
+    .no {
+        margin: 1% auto 0 46.8%;
+    }
+    .ball {
+        width: 16rem;
+        height: 16rem;
+        margin: 5% 0 0 360%;
+    }
+    .button {
+        width: 5rem;
+        height: 5rem;
+        top: calc(50% - 2.5rem);
+        left: calc(50% - 2.5rem);
+    }
+    .inner-button {
+        width: 2.8rem;
+        height: 2.8rem;
+        top: calc(50% - 1.4rem);
+        left: calc(50% - 1.4rem);
+    }
+    .calculator {
+        max-width: 28rem;
+        margin: 5% 0 0 38%;
+    }
+    button:not(.checkpoint, .top) {
+        padding: 1.3rem 0.5rem;
+        font-size: 1.4rem;
+    }
+    .number,
+    .operator,
+    .decimal {
+        width: 80px;
+        height: 56px;
+        line-height: 80%;
+    }
+    .del,
+    .reset,
+    .equal {
+        height: 56px;
+        line-height: 80%;
+    }
+    .del {
+        width: 80px;
+    }
+    .form {
+        max-width: 700px;
+    }
+    .github {
+        max-width: 6rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .ball {
+        margin: 5% 0 0 330%;
+    }
+    .calculator {
+        margin: 5% 0 0 36%;
+    }
+    .top::before {
+        width: 5.8rem;
+        height: 5.8rem;
+        font-size: 4.4rem;
+        line-height: 5rem;
+    }
+    .top {
+        bottom: 14%;
+    }
+}
+
+@media (max-width: 1920px) {
+    .no {
+        margin: 1% auto 0 46%;
+    }
+    .github {
+        max-width: 6rem;
+    }
+}
 
 @media (max-width: 1240px) {
     .no {
