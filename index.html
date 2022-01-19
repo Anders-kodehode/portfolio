@@ -123,38 +123,38 @@
                 </div>
                 <!-- Contact Form -->
                 <div class="form content contentnorsk">
-                    <form action="action_page.php">
+                    <form method="post" action="contact-form-handler.php">
                 
                     <label for="fname">Navn</label>
-                    <input type="text" class="name" name="navn" placeholder="Ditt personnavn eller bedriftsnavn...">
+                    <input type="text" class="name" name="name" placeholder="Ditt personnavn eller bedriftsnavn...">
                 
                     <label for="lname">Email</label>
                     <input type="text" class="email" name="email" placeholder="Din email...">
                 
-                    <label for="country">Emne</label>
-                    <input type="text" class="topic" name="emne" placeholder="Legg til et emne...">
+                    <label for="subject">Emne</label>
+                    <input type="text" class="subject" name="subject" placeholder="Legg til et emne...">
                 
-                    <label for="subject">Beskrivelse</label>
-                    <textarea class="description" name="beskrivelse" placeholder="Skriv noe..."></textarea>
+                    <label for="message">Innhold</label>
+                    <textarea class="message" name="message" placeholder="Skriv noe..."></textarea>
                 
                     <input type="submit" value="Send"
                     accesskey="s">
                     </form>
                 </div>
                 <div class="form content contentenglish">
-                    <form action="action_page.php">
+                    <form method="post" action="contact-form-handler.php">
                 
                     <label for="fname">Name</label>
-                    <input type="text" class="name" name="navn" placeholder="Your personal name or business...">
+                    <input type="text" class="name" name="name" placeholder="Your personal name or business...">
                 
                     <label for="lname">Email</label>
                     <input type="text" class="email" name="email" placeholder="Your email...">
                 
-                    <label for="country">Subject</label>
-                    <input type="text" class="topic" name="emne" placeholder="Add a subject...">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="subject" name="subject" placeholder="Add a subject...">
                 
-                    <label for="subject">Description</label>
-                    <textarea class="description" name="beskrivelse" placeholder="Write something..."></textarea>
+                    <label for="message">Message</label>
+                    <textarea class="message" name="message" placeholder="Write something..."></textarea>
                 
                     <input type="submit" value="Send"
                     accesskey="s">
