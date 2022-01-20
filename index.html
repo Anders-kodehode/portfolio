@@ -21,9 +21,11 @@
         <main>
             <!-- Language Switch -->
             <div class="lang-switch">
-                <span class="no">Norsk</span>
-                <input type="checkbox" class="check">
-                <span class="en">English</span>
+                <div class="lang-switch-button">
+                    <span class="no">Norsk</span>
+                    <input onclick="buttonToggle()" type="checkbox" class="check">
+                    <span class="en">English</span>
+                </div>
                 <!-- Jump to sections -->
             <div class="content contentnorsk">
                 <button onclick="scrollAbout()" class="checkpoint" id="about-me">Om meg</button>
@@ -165,7 +167,7 @@
         <!-- Github Link Button -->
         <a href="https://github.com/Anders-kodehode" rel="noopener noreferrer" target="_blank"><img src="./Images/github.PNG" alt="github" class="github"></a>
         <!-- Scroll To Top Button -->
-        <button onclick="topFunction()" class="top" title="Go to top"></button>
+        <button onclick="topFunction()" class="top"></button>
 
     </body>
 </html>

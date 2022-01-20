@@ -1,4 +1,20 @@
-// Jump to sections
+// Language Switch
+let isNorsk = true
+
+function buttonToggle() {
+  const check = document.querySelector(".check");
+  if (isNorsk) {
+      document.querySelectorAll(".contentnorsk").forEach(node => node.style.display = "none")
+      document.querySelectorAll(".contentenglish").forEach(node => node.style.display = "block")
+      isNorsk = false
+    } else {
+        document.querySelectorAll(".contentnorsk").forEach(node => node.style.display = "block")
+        document.querySelectorAll(".contentenglish").forEach(node => node.style.display = "none")
+        isNorsk = true
+    }
+}
+
+// Jump To Sections
 function scrollAbout() {
     window.scrollTo(0, 500);
 }
