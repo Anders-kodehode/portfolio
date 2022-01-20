@@ -43,6 +43,17 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+// Indicator moves to active list item
+let list = document.querySelectorAll('.list');
+list.forEach((item) =>
+item.addEventListener('click', activeLink));
+
+function activeLink(){
+    list.forEach((item) =>
+    item.classList.remove('active'));
+    this.classList.add('active');
+}
+
 // Pokeball
 const ball = document.querySelector(".ball");
 const innerButton = document.querySelector(".inner-button");

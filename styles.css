@@ -212,8 +212,8 @@ p {
 }
 /* My Works */
 .projects {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     margin: 5% auto 5% auto;
 }
@@ -231,7 +231,127 @@ p {
     left: 50%;
     transform: translate(-50%,-50%);
 }
+/* Navbar */
+.navigation {
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 25rem;
+    height: 4.2rem;
+    margin-inline: auto;
+    border-radius: 1rem;
+}
 
+.navigation ul {
+    display: flex;
+    width: 22rem;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 4.4rem;
+    height: 4.4rem;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation ul li a .icon {
+    color: hsl(271, 23%, 37%);
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 5rem;
+    transition: 600ms;
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(32px);
+}
+
+.navigation ul li a .text {
+    background-color: hsl(271, 23%, 37%);
+    color: hsl(0, 0%, 100%);
+    position: absolute;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .05rem;
+    transition: 600ms;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.indicator {
+    background: hsl(0, 0%, 100%);
+    position: absolute;
+    width: 4.4rem;
+    height: 4.4rem;
+    top: 50%;
+    border-radius: 50%;
+    transition: 400ms;
+}
+
+.indicator::before {
+    background: transparent;
+    content: '';
+    position: absolute;
+    width: 1.1rem;
+    height: 1rem;
+    top: 20%;
+    left: -1.25rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: 1px .5rem 0 0 hsl(0, 0%, 0%);
+}
+
+.indicator::after {
+    background: transparent;
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    right: -28px;
+    border-radius: 50%;
+    box-shadow: -15px 18px hsl(0, 0%, 0%);
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(4.4rem * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(4.4rem * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(4.4rem * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(4.4rem * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(4.4rem * 4));
+}
 /* Pokeball */
 .ball {
     background: white;
@@ -439,19 +559,22 @@ input[type=submit]:hover {
 /* Scroll Up Button */
 .top{
     background-color: transparent;
+    display: block;
     color: rgb(194, 193, 193);
     position: fixed;
     right: 8%;
     bottom: 16%;
+    border: 0;
     border-color:white;
     transition: all 200ms ease-out;
   }
   .top::before{
+      display: block;
     content: '▲';
     position:absolute;
-    width: 4rem;
-    height: 4rem;
-    font-size: 3.3rem;
+    width: 3.8rem;
+    height: 3.8rem;
+    font-size: 3rem;
     line-height: 3.4rem;
     border: solid .2rem rgb(175, 175, 175);
     border-radius: 10rem;
