@@ -182,7 +182,7 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 h1 {
     display: flex;
     justify-content: center;
-    margin: 8% 0 1% 0;
+    margin: 8% 0 1.5% 0;
     font-size: clamp(1rem, 1rem + 5vw, 3rem);
     font-weight: 800;
 }
@@ -202,7 +202,7 @@ p {
 }
 /* About Me */
 .about {
-    margin-top: 3%;
+    margin-top: 5%;
 }
 
 .about-content {
@@ -212,14 +212,7 @@ p {
 }
 /* My Works */
 .projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    margin: 5% auto 5% auto;
-}
-
-.perspective {
-    perspective: 70rem;
+    margin-top: 5%;
 }
 
 .demo {
@@ -229,205 +222,49 @@ p {
     align-self: flex-start;
     position: absolute;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-/* Navbar */
-.navigation {
-    background: hsl(0, 0%, 100%);
-    display: flex;
+
+.demoSelect {
+    display: inline-flex;
     justify-content: center;
-    position: relative;
-    width: 25rem;
-    height: 4.2rem;
-    margin-inline: auto;
-    border-radius: 1rem;
-}
-
-.navigation ul {
-    display: flex;
-    width: 22rem;
-}
-
-.navigation ul li {
-    position: relative;
-    list-style: none;
-    width: 4.4rem;
-    height: 4.4rem;
-    z-index: 1;
-}
-
-.navigation ul li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    text-align: center;
-}
-
-.navigation ul li a .icon {
-    color: hsl(271, 23%, 37%);
-    display: block;
-    position: relative;
-    text-align: center;
-    font-size: 2rem;
-    line-height: 5rem;
-    transition: 600ms;
-}
-
-.navigation ul li.active a .icon {
-    transform: translateY(32px);
-}
-
-.navigation ul li a .text {
-    background-color: hsl(271, 23%, 37%);
-    color: hsl(0, 0%, 100%);
-    position: absolute;
-    padding: 2px 7px;
-    border-radius: 12px;
+    margin: 5% 0 0 50%;
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: .05rem;
-    transition: 600ms;
-    opacity: 0;
-    transform: translateY(-30px);
+    gap: 1vw;
+    transform: translate(-50%, -50%);
 }
 
-.navigation ul li.active a .text {
-    opacity: 1;
-    transform: translateY(-20px);
+.keypadActive,
+.calculatorActive,
+.navbarActive,
+.figmaActive {
+    background-color: hsla(258, 63%, 23%, 0.3);
+    padding: 4px 14px;
+    border: solid 2px hsla(258, 63%, 23%, 0.4);
+    border-radius: 12px;
+    box-shadow: 0px 1px 2px var(--del-reset-shadow);
+    user-select: none;
+    cursor: pointer;
 }
 
-.indicator {
-    background: hsl(0, 0%, 100%);
-    position: absolute;
-    width: 4.4rem;
-    height: 4.4rem;
-    top: 50%;
-    border-radius: 50%;
-    transition: 400ms;
+.keypadActive:hover,
+.calculatorActive:hover,
+.navbarActive:hover,
+.figmaActive:hover {
+    background-color: var(--del-reset-background);
+    padding: 4px 14px;
+    box-shadow: 0px 2px 4px var(--del-reset-shadow);
+    transition: ease-in-out 300ms;
 }
-
-.indicator::before {
-    background: transparent;
-    content: '';
-    position: absolute;
-    width: 1.1rem;
-    height: 1rem;
-    top: 20%;
-    left: -1.25rem;
-    border-bottom-left-radius: 1rem;
-    box-shadow: 1px .5rem 0 0 hsl(0, 0%, 0%);
-}
-
-.indicator::after {
-    background: transparent;
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 5px;
-    right: -28px;
-    border-radius: 50%;
-    box-shadow: -15px 18px hsl(0, 0%, 0%);
-}
-
-.navigation ul li:nth-child(1).active ~ .indicator {
-    transform: translateX(calc(4.4rem * 0));
-}
-
-.navigation ul li:nth-child(2).active ~ .indicator {
-    transform: translateX(calc(4.4rem * 1));
-}
-
-.navigation ul li:nth-child(3).active ~ .indicator {
-    transform: translateX(calc(4.4rem * 2));
-}
-
-.navigation ul li:nth-child(4).active ~ .indicator {
-    transform: translateX(calc(4.4rem * 3));
-}
-
-.navigation ul li:nth-child(5).active ~ .indicator {
-    transform: translateX(calc(4.4rem * 4));
-}
-/* Pokeball */
-.ball {
-    background: white;
-    position: relative;
-    width: 13rem;
-    height: 13rem;
-    margin: 5% 0 0 50vmin;
-    border: .6rem solid black;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: inset -1rem 1rem 0 1rem rgb(230, 227, 227);
-    animation: shake 1000ms cubic-bezier(.5,.1,.2,1) 3;
-    transform: rotateY(-5deg);
-}
-
-.ball::before {
-    background: var(--del-reset-background);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    border-radius: 50% 50% 0 0;
-}
-
-.ball::after {
-    background: linear-gradient(black, rgb(8, 8, 8), black) black;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 8%;
-    top: calc(50% - .5rem);
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8);
-}
-
-.button {
-    background: darkgrey;
-    position: absolute;
-    width: 4rem;
-    height: 4rem;
-    top: calc(50% - 2rem);
-    left: calc(50% - 2rem);
-    border: .6rem solid black;
-    border-radius: 50%;
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8);
-    z-index: 1;
-}
-
-.inner-button {
-    background: grey;
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    top: calc(50% - 1rem);
-    left: calc(50% - 1rem);
-    border: .2rem solid dimgrey;
-    border-radius: 50%;
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8);
-    animation: 500ms blink 50ms alternate 7;
-}
-
-@keyframes blink {
-    from { background: grey;}
-    to { background: indianred;}
-}
-
-@keyframes shake {
-    0% { transform: translate(0, 0) rotate(0); }
-    50% { transform: translate(-10px, 0) rotate(-15deg); }
-    100% { transform: translate(0, 0) rotateY(-30); }
-}
-/* Calculator Section */
+/* Calculator*/
 .calculator {
-    margin: auto;
+    display: none;
+    position: absolute;
     max-width: 24rem;
-    margin: 5% 0 0 5vw;
-    transform: rotateY(-40deg);
+    margin: 5% 0 0 50%;
+    transform: translate(-50%, 0);
 }
 /* General Button Styling */
 button:not(.checkpoint, .top) {
@@ -445,7 +282,7 @@ button:not(.checkpoint, .top) {
 
 button:hover,
 .result-screen:hover {
-    outline: 2px solid #7b6992
+    outline: 2px solid hsla(266, 16%, 49%, 0.5)
 }
 /* Specific Button Styling */
 .number,
@@ -508,9 +345,251 @@ button:hover,
     .equal {
         grid-column: 3 / -1;
 }
+/* Keypad */
+.keypad {
+    display: none;
+    justify-content: center;
+    position: absolute;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 5% 0 0 50%;
+    transform: translate(-50%, 0);
+}
+
+.key-keypad {
+    background: linear-gradient(180deg, hsl(0, 0%, 16%), hsl(0, 0%, 13%));
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 2px 2px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    box-shadow: inset 0 -8px 0 8px rgba(0,0,0,0.15), inset 0 -8px 8px rgba(0,0,0,0.25), 0 0 0 2px hsla(0, 0%, 0%, 0.75), 10px 20px 25px hsla(0, 0%, 0%, 0.4); 
+    overflow: hidden;
+}
+
+.key-keypad::before {
+    background: linear-gradient(90deg, hsl(0, 0%, 14%), hsl(0, 0%, 29%));
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: 12px;
+    bottom: 14px;
+    left: 4px;
+    border-radius: 10px;
+    box-shadow: -10px -10px 10px hsla(0, 0%, 100%, 0.25), 10px 5px 10px hsla(0, 0%, 0%, 0.15);
+    border-top: 1px solid hsla(0, 0%, 0%, 0.267);
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.267);
+    border-left: 1px solid hsla(0, 0%, 0%, 0.267);
+}
+
+.key-keypad:active {
+    box-shadow: inset 0 -8px 0 8px rgba(0,0,0,0.15), inset 0 -8px 8px rgba(0,0,0,0.15), 0 0 0 1px hsla(0, 0%, 0%, 0.6), 8px 18px 22px hsla(0, 0%, 0%, 0.4);
+    transform: translateY(2px);
+}
+/* Long Keys */
+span:nth-child(8) {
+    grid-area: 2/4/4/4;
+    height: 164px;
+}
+span:nth-child(15) {
+    grid-area: 4/4/6/4;
+    height: 164px;
+}
+span:nth-child(16) {
+    grid-area: 5/1/5/3;
+    width: 164px;
+}
+/* Key Letters General */
+span i {
+    color: hsl(0, 0%, 90%);
+    position: relative;
+    font-style: oblique;
+    font-weight: bold;
+    user-select: none;
+}
+/* Key Letters Specific */
+.num-keypad,
+.enter-keypad {
+    font-size: 13px;
+    font-weight: 700;
+}
+.divide-keypad,
+.multiply-keypad,
+.minus-keypad,
+.number-keypad {
+    margin-left: 1.05rem;
+}
+.zero-keypad {
+    font-size: 18px;
+    margin-left: 4.1rem;
+}
+.period-keypad {
+    font-size: 18px;
+    margin-left: 1.3rem;
+}
+.plus-keypad {
+    margin-left: 1.05rem;
+}
+/* Navbar */
+.navigation {
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 25rem;
+    height: 4.2rem;
+    margin-top: 5%;
+    margin-inline: auto;
+    border-radius: 1rem;
+}
+
+.navigation ul {
+    display: flex;
+    width: 22rem;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 4.4rem;
+    height: 4.4rem;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation ul li a .icon {
+    color: var(--del-reset-background);
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 2.2rem;
+    line-height: 5rem;
+    transition: 600ms;
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(33px);
+}
+
+.navigation ul li a .text {
+    background-color: var(--del-reset-background);
+    color: hsl(0, 0%, 100%);
+    position: absolute;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .05rem;
+    transition: 600ms;
+    opacity: 0;
+    transform: translateY(-30px);
+    user-select: none;
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(-15px);
+}
+
+.indicator {
+    background: hsl(0, 0%, 100%);
+    position: absolute;
+    width: 4.4rem;
+    height: 4.5rem;
+    top: 50%;
+    border-radius: 50%;
+    transition: 400ms;
+}
+
+.indicator::before {
+    background: transparent;
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 33px;
+    top: 32px;
+    left: -38px;
+    border-radius: 50%;
+    box-shadow: 28px -20px hsl(0, 0%, 100%);
+}
+
+.indicator::after {
+    background: transparent;
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 31px;
+    top: 32px;
+    right: -38px;
+    border-radius: 50%;
+    box-shadow: -28px -16px hsl(0, 0%, 100%);
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(4.4rem * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(4.4rem * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(4.4rem * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(4.4rem * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(4.4rem * 4));
+}
+/* Figma File */
+.figma {
+    position: relative;
+    max-width: 50rem;
+    min-width: 30rem;
+    margin: 6% 0 0 50%;
+    opacity: 50%;
+    transform: translate(-53%, 0);
+}
+
+.figma:hover {
+    opacity: 80%;
+    transition: ease-in-out 300ms;
+}
+
+.clickMe {
+    visibility: hidden;
+    color: hsl(0, 82%, 31%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 4px hsl(0, 60%, 8%);
+    text-decoration: none;
+    user-select: none;
+    transform: translate(-50%, -50%);
+}
+
+.figma:hover .clickMe {
+    visibility: visible;
+    transition: ease-in 300ms;
+}
 /* Contact Section */
 .contact {
-    margin: 4% 0 0 0;
+    margin: 5% 0 0 0;
 }
 /* Contact Form */
 .form {
@@ -590,26 +669,8 @@ input[type=submit]:hover {
 }
 /* Media Queries */
 @media (min-width: 2560px) {
-    .ball {
-        width: 16rem;
-        height: 16rem;
-        margin: 5% 0 0 360%;
-    }
-    .button {
-        width: 5rem;
-        height: 5rem;
-        top: calc(50% - 2.5rem);
-        left: calc(50% - 2.5rem);
-    }
-    .inner-button {
-        width: 2.8rem;
-        height: 2.8rem;
-        top: calc(50% - 1.4rem);
-        left: calc(50% - 1.4rem);
-    }
     .calculator {
         max-width: 28rem;
-        margin: 5% 0 0 38%;
     }
     button:not(.checkpoint, .top) {
         padding: 1.3rem 0.5rem;
@@ -640,12 +701,6 @@ input[type=submit]:hover {
 }
 
 @media (min-width: 1920px) {
-    .ball {
-        margin: 5% 0 0 330%;
-    }
-    .calculator {
-        margin: 5% 0 0 36%;
-    }
     .top::before {
         width: 5.8rem;
         height: 5.8rem;
@@ -670,16 +725,8 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 1080px) {
-    .projects {
-        flex-direction: column;
-    }
-    .ball {
-        margin: 20% 0 0 0;
-        transform: rotateY(0);
-    }
     .calculator {
         margin: 2% 0 0 0;
-        transform: rotateY(0);
     }
     .top {
         right: 9%;

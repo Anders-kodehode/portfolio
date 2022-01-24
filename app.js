@@ -1,5 +1,5 @@
 // Language Switch
-let isNorsk = true
+let isNorsk = true;
 
 function buttonToggle() {
   const check = document.querySelector(".check");
@@ -11,6 +11,13 @@ function buttonToggle() {
         document.querySelectorAll(".contentnorsk").forEach(node => node.style.display = "block")
         document.querySelectorAll(".contentenglish").forEach(node => node.style.display = "none")
         isNorsk = true
+    }
+}
+// Toggle between demo components
+function projectToggle(keypadActive) {
+    const keypad = document.querySelector("keypad");
+    if (keypadActive.style == "none") {
+        keypad.style.display = "block";
     }
 }
 
@@ -43,6 +50,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+// Navbar
 // Indicator moves to active list item
 let list = document.querySelectorAll('.list');
 list.forEach((item) =>
@@ -54,33 +62,9 @@ function activeLink(){
     this.classList.add('active');
 }
 
-// Pokeball
-const ball = document.querySelector(".ball");
-const innerButton = document.querySelector(".inner-button");
-
-ball.addEventListener('click', function(e) {
-    e.preventDefault;
-
-    ball.classList.remove('ball');
-
-    void ball.offsetWidth;
-
-    ball.classList.add('ball');
-}, false);
-
-innerButton.addEventListener('click', function(e) {
-    e.preventDefault;
-
-    innerButton.classList.remove("inner-button");
-
-    void innerButton.offsetWidth;
-
-    innerButton.classList.add("inner-button");
-}, false);
-
 // Calculator
-const display = document.querySelector(".result-screen")
-const buttons = Array.from(document.querySelectorAll("button:not(.checkpoint)"))
+const display = document.querySelector(".result-screen");
+const buttons = Array.from(document.querySelectorAll("button:not(.checkpoint)"));
 
 buttons.map(button => {
     button.addEventListener('click', (e) => {

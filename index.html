@@ -40,17 +40,15 @@
                 <!-- Intro -->
                 <div class="content contentnorsk">
                     <h1>Anders Nyhammer</h1>
-                    <p>Ekstraordinær frontend utvikler</p>
-                    <p>Selverklært idiot</p>
+                    <p>Frontend utvikler</p>
+                    <p>UX / UI design</p>
                     <p>CSS entusiast</p>
-                    <p>hekta på FFXIV</p>
                 </div>
                 <div class="content contentenglish">
                     <h1>Anders Nyhammer</h1>
-                    <p>Frontend developer extraordinaire</p>
-                    <p>self-proclaimed idiot</p>
+                    <p>Frontend developer</p>
+                    <p>UX / UI design</p>
                     <p>CSS enthusiast</p>
-                    <p>FFXIV addict</p>
                 </div>
                 <!-- Portrait -->
                 <img src="./Images/face.png" alt="face" class="face">
@@ -80,7 +78,59 @@
                 <!-- My Works -->
                 <div class="projects perspective">  
                     <h2 class="demo">Demo</h2>
-                            <!-- Navbar -->
+                    <div class="demoSelect">
+                        <span class="calculatorActive">Calculator</span>
+                        <span onclick="projectToggle()" class="keypadActive">Keypad</span>
+                        <span class="navbarActive">Navbar</span>
+                        <span class="figmaActive">Figma</span>
+                    </div>
+                    <!-- Calculator -->
+                    <div class="calculator">
+                        <div class="result-container">
+                            <input type="text" class="result-screen" placeholder="0" disabled />
+                        </div>
+                        <div class="input-container">
+                            <button type="button" class="number" value="7">7</button>
+                            <button type="button" class="number" value="8">8</button>
+                            <button type="button" class="number" value="9">9</button>
+                            <button type="button" class="del" value="del">DEL</button>
+                            <button type="button" class="number" value="4">4</button>
+                            <button type="button" class="number" value="5">5</button>
+                            <button type="button" class="number" value="6">6</button>
+                            <button type="button" class="operator" value="+">+</button>
+                            <button type="button" class="number" value="1">1</button>
+                            <button type="button" class="number" value="2">2</button>
+                            <button type="button" class="number" value="3">3</button>
+                            <button type="button" class="operator" value="-">-</button>
+                            <button type="button" class="decimal" value=".">.</button>
+                            <button type="button" class="number" value="0">0</button>
+                            <button type="button" class="operator" value="/">/</button>
+                            <button type="button" class="operator" value="*">*</button>
+                            <button type="button" class="reset" value="reset">RESET</button>
+                            <button type="button" class="equal" value="=">=</button>
+                        </div>
+                    </div>
+                    <!-- Keypad -->
+                    <div class="keypad">
+                        <span data-key="144" class="key-keypad"><i class="num-keypad">NUMLK</i></span>
+                        <span data-key="111" class="key-keypad"><i class="divide-keypad">/</i></span>
+                        <span data-key="106" class="key-keypad"><i class="multiply-keypad">*</i></span>
+                        <span data-key="189" class="key-keypad"><i class="minus-keypad">-</i></span>
+                        <span data-key="55" class="key-keypad"><i class="number-keypad">7</i></span>
+                        <span data-key="56" class="key-keypad"><i class="number-keypad">8</i></span>
+                        <span data-key="57" class="key-keypad"><i class="number-keypad">9</i></span>
+                        <span data-key="187" class="key-keypad"><i class="plus-keypad">+</i></span>
+                        <span data-key="52" class="key-keypad"><i class="number-keypad">4</i></span>
+                        <span data-key="53" class="key-keypad"><i class="number-keypad">5</i></span>
+                        <span data-key="54" class="key-keypad"><i class="number-keypad">6</i></span>
+                        <span data-key="49" class="key-keypad"><i class="number-keypad">1</i></span>
+                        <span data-key="50" class="key-keypad"><i class="number-keypad">2</i></span>
+                        <span data-key="51" class="key-keypad"><i class="number-keypad">3</i></span>
+                        <span data-key="13" class="key-keypad"><i class="enter-keypad">ENTER</i></span>
+                        <span data-key="48" class="key-keypad"><i class="zero-keypad">0</i></span>
+                        <span data-key="190" class="key-keypad"><i class="period-keypad">.</i></span>
+                    </div>
+                    <!-- Navbar -->
                     <div class="navigation">
                         <ul>
                             <li class="list active">
@@ -126,39 +176,11 @@
                             <div class="indicator"></div>
                         </ul>
                     </div>
-                    <!-- Pokeball -->
-                    <div class="container">
-                        <div class="ball">
-                            <div class="button">
-                                <div class="inner-button">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Calculator -->
-                    <div class="calculator">
-                        <div class="result-container">
-                            <input type="text" class="result-screen" placeholder="0" disabled />
-                        </div>
-                        <div class="input-container">
-                            <button type="button" class="number" value="7">7</button>
-                            <button type="button" class="number" value="8">8</button>
-                            <button type="button" class="number" value="9">9</button>
-                            <button type="button" class="del" value="del">DEL</button>
-                            <button type="button" class="number" value="4">4</button>
-                            <button type="button" class="number" value="5">5</button>
-                            <button type="button" class="number" value="6">6</button>
-                            <button type="button" class="operator" value="+">+</button>
-                            <button type="button" class="number" value="1">1</button>
-                            <button type="button" class="number" value="2">2</button>
-                            <button type="button" class="number" value="3">3</button>
-                            <button type="button" class="operator" value="-">-</button>
-                            <button type="button" class="decimal" value=".">.</button>
-                            <button type="button" class="number" value="0">0</button>
-                            <button type="button" class="operator" value="/">/</button>
-                            <button type="button" class="operator" value="*">*</button>
-                            <button type="button" class="reset" value="reset">RESET</button>
-                            <button type="button" class="equal" value="=">=</button>
+                    <!-- Figma File -->
+                    <div class="figma">
+                        <a href="https://www.figma.com/file/rnZhGzzfqqG3pdWWRVkZQW/?node-id=0%3A1" rel="noopener noreferrer" target="_blank"><img src="./Images/ITL preview.png" alt="figma page preview"></a>
+                        <div>
+                            <a href="https://www.figma.com/file/rnZhGzzfqqG3pdWWRVkZQW/?node-id=0%3A1" rel="noopener noreferrer" target="_blank"><p class="clickMe">Click Me!</p></a>
                         </div>
                     </div>
                 </div>
