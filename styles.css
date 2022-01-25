@@ -366,6 +366,7 @@ button:hover,
     display: none;
     justify-content: center;
     position: relative;
+    max-width: 300px;
     grid-template-columns: repeat(4, 1fr);
     margin: 5% 0 0 50%;
     transform: translate(-50%, 0);
