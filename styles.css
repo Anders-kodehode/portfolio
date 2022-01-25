@@ -252,13 +252,13 @@ p {
     transform: translate(-50%, -50%);
 }
 
-.keypadActive,
 .calculatorActive,
+.keypadActive,
 .navbarActive,
 .figmaActive {
     background-color: hsla(258, 63%, 23%, 0.3);
     padding: 4px 14px;
-    border: solid 2px hsla(258, 63%, 23%, 0.4);
+    border: solid 2px hsla(258, 63%, 23%, 0.2);
     border-radius: 12px;
     box-shadow: 0px 1px 2px var(--del-reset-shadow);
     user-select: none;
@@ -266,13 +266,23 @@ p {
     transition: ease-in-out 300ms;
 }
 
-.keypadActive:hover,
 .calculatorActive:hover,
+.keypadActive:hover,
 .navbarActive:hover,
 .figmaActive:hover {
     background-color: var(--del-reset-background);
-    padding: 4px 14px;
-    box-shadow: 0px 2px 4px var(--del-reset-shadow);
+    padding: 4px 16px;
+    text-shadow: 2px 4px 2px hsl(281, 42%, 10%);
+}
+.calculatorActive:hover {
+    box-shadow: -2px 6px 1px var(--del-reset-shadow);
+}
+.keypadActive:hover,
+.navbarActive:hover {
+    box-shadow: 0px 6px 1px var(--del-reset-shadow);
+}
+.figmaActive:hover {
+    box-shadow: 2px 6px 1px var(--del-reset-shadow);
 }
 /* Calculator*/
 .calculator {
