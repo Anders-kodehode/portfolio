@@ -183,10 +183,11 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     font-weight: 500;
     border-style: none;
     cursor: pointer;
+    transition: ease-in-out 300ms;
 }
 
 .checkpoint:hover {
-    color: #655a7e;
+    color: #726c80;
     outline: none;
 }
 

@@ -16,10 +16,10 @@ function buttonToggle() {
 
 // Jump To Sections
 function scrollAbout() {
-    window.scrollTo(0, 500);
+    window.scrollTo(0, 550);
 }
 function scrollProjects() {
-    window.scrollTo(0, 1050);
+    window.scrollTo(0, 1000);
 }
 function scrollContact() {
     window.scrollTo(0, 1650);
