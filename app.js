@@ -13,13 +13,6 @@ function buttonToggle() {
         isNorsk = true
     }
 }
-// Toggle between demo components
-function projectToggle(keypadActive) {
-    const keypad = document.querySelector("keypad");
-    if (keypadActive.style == "none") {
-        keypad.style.display = "block";
-    }
-}
 
 // Jump To Sections
 function scrollAbout() {
@@ -49,6 +42,64 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// Toggle between demo components
+const calculator = document.querySelector(".calculator");
+const keypad = document.querySelector(".keypad");
+const navigation = document.querySelector(".navigation");
+const figma = document.querySelector(".figma");
+// Calculator
+function projectToggleCalculator() {
+    if (keypad.style.display = "grid") {
+        keypad.style.display = "none";
+    } if (navigation.style.display = "flex") {
+        navigation.style.display = "none";
+    } if (figma.style.display = "block") {
+        figma.style.display = "none";
+    } if (calculator.style.display == "" || calculator.style.display == "none") {
+        calculator.style.display = "block";
+    } else {
+        calculator.style.display = "none";
+}};
+// Keypad
+function projectToggleKeypad() {
+    if (calculator.style.display = "block") {
+        calculator.style.display = "none";
+    } if (navigation.style.display = "flex") {
+        navigation.style.display = "none";
+    } if (figma.style.display = "block") {
+        figma.style.display = "none";
+    } if (keypad.style.display == "" || keypad.style.display == "none") {
+        keypad.style.display = "grid";
+    } else {
+        keypad.style.display = "none";
+}};
+// Navbar
+function projectToggleNavbar() {
+    if (calculator.style.display = "block") {
+        calculator.style.display = "none";
+    } if (keypad.style.display = "grid") {
+        keypad.style.display = "none";
+    } if (figma.style.display = "block") {
+        figma.style.display = "none";
+    } if (navigation.style.display == "" || navigation.style.display == "none") {
+        navigation.style.display = "flex";
+    } else {
+        navigation.style.display = "none";
+}};
+// Figma
+function projectToggleFigma() {
+    if (calculator.style.display = "block") {
+        calculator.style.display = "none";
+    } if (keypad.style.display = "grid") {
+        keypad.style.display = "none";
+    } if (navigation.style.display = "flex") {
+        navigation.style.display = "none";
+    } if (figma.style.display == "" || figma.style.display == "none") {
+        figma.style.display = "block";
+    } else {
+        figma.style.display = "none";
+}};
 
 // Navbar
 // Indicator moves to active list item

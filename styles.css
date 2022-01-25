@@ -276,7 +276,7 @@ p {
 /* Calculator*/
 .calculator {
     display: none;
-    position: absolute;
+    position: relative;
     max-width: 24rem;
     margin: 5% 0 0 50%;
     transform: translate(-50%, 0);
@@ -364,7 +364,7 @@ button:hover,
 .keypad {
     display: none;
     justify-content: center;
-    position: absolute;
+    position: relative;
     grid-template-columns: repeat(4, 1fr);
     margin: 5% 0 0 50%;
     transform: translate(-50%, 0);
@@ -448,7 +448,7 @@ span i {
 /* Navbar */
 .navigation {
     background: hsl(0, 0%, 100%);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -571,11 +571,12 @@ span i {
 }
 /* Figma File */
 .figma {
+    display: none;
     position: relative;
+    opacity: 50%;
     max-width: 50rem;
     min-width: 30rem;
-    margin: 6% 0 0 50%;
-    opacity: 50%;
+    margin: 5% 0 0 50%;
     transform: translate(-53%, 0);
     transition: ease-in-out 300ms;
 }
@@ -742,9 +743,6 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 1080px) {
-    .calculator {
-        margin: 2% 0 0 0;
-    }
     .top {
         right: 9%;
         bottom: 15%;
