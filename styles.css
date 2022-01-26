@@ -697,6 +697,12 @@ input[type=submit]:hover {
   .top:hover::before{
     transform: rotate(360deg);
 }
+/* Footer */
+.footerText {
+    color: #c4c4c4;
+    opacity: 50%;
+    font-size: 14px;
+}
 /* Media Queries */
 @media (min-width: 2560px) {
     .calculator {
